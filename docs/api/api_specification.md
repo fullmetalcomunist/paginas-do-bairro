@@ -25,27 +25,27 @@ A autenticação será feita via token JWT, que deve ser enviado no cabeçalho `
 
 **Endpoint:** `POST /loans`
 * **Parâmetros (Corpo da Requisição):**
-    ` ` `json
+    ```json
     {
       "userId": "uuid-do-leitor",
       "bookId": "uuid-do-livro"
     }
-    ` ` `
+    ```
 * **Resposta (201 Created):**
-    ` ` `json
+    ```json
     {
       "loanId": "uuid-do-emprestimo",
       "bookTitle": "O Pequeno Príncipe",
       "userName": "Nome do Leitor",
       "dueDate": "2025-10-13"
     }
-    ` ` `
+    ```
 
 ## [cite_start]4. Exemplo de Chamada e Resposta [cite: 157]
 
 **Requisição:** `GET /books?search=Saramago`
 **Resposta (200 OK):**
-` ` `json
+```json
 [
     {
         "bookId": "uuid-do-livro-1",
@@ -60,4 +60,3 @@ A autenticação será feita via token JWT, que deve ser enviado no cabeçalho `
         "status": "EMPRESTADO"
     }
 ]
-` ` `
